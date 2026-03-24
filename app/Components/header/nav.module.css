@@ -1,0 +1,81 @@
+.navbar{
+    animation: SlideIN 0.5s ease-out ;
+}
+@keyframes SlideIN {
+    0%{
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.focus{
+    animation: Focus 2s ease-in 0.5s forwards;
+    filter: blur(10px);
+    opacity: 0;
+}
+@keyframes Focus {
+    0%{
+        filter: blur(10px);
+        opacity: 0;
+    }
+    25%{
+        filter: blur(5px);
+        opacity: 0.25;
+    }
+    50%{
+        filter: blur(0px);
+        opacity: 0.5;
+    }
+    75%{
+        filter: blur(10px);
+        opacity: 0.75;
+    }
+    100%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.contactIcon{
+    animation: ContactIcon 0.5s ease-in-out 3s;
+}
+@keyframes ContactIcon {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(60deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(60deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.features{
+    display: grid;
+    margin-top: 4rem;
+    text-align: center;
+    color: white;
+    gap: 10px;
+    animation: fade 0.5s ease-in ;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.features p{
+    background-color: rgb(53, 53, 59);
+    border-radius: 10px;
+}
